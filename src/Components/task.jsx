@@ -4,9 +4,7 @@ class Task extends Component {
   render() {
     return (
       <div className="m-2">
-        <span className="border m-2 border-primary">
-          {this.props.task.label}
-        </span>
+        <span className=" m-3">{this.props.task.label}</span>
         <button
           onClick={() => this.props.onSelected(this.props.task)}
           className={this.getButtonClasses()}

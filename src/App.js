@@ -25,7 +25,7 @@ class App extends Component {
     const index = tasks.length + 1;
     tasks.push({ id: index, selected: false, label: this.state.newText });
 
-    this.setState({ tasks });
+    this.state.newText !== "" && this.setState({ tasks });
   };
   handleClean = () => {
     let tasks = this.state.tasks.filter(c => c.selected !== true);
